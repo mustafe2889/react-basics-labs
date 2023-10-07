@@ -7,10 +7,13 @@ import CardContent from '@mui/material/CardContent';
 import CardHeader from '@mui/material/CardHeader';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
+import Chip from "@mui/material/Chip";
+
 
 const Task = (props) => {
 
    return( 
+
     <Grid item key={props.id} xs={12} md={4}>
       <Card
         sx={{
@@ -33,6 +36,8 @@ const Task = (props) => {
               display: "flex",
               justifyContent: "center",
               alignItems: "baseline",
+              alignItems: "center", 
+              flexDirection: "column", 
               mb: 2,
               padding: "20px",
             }}
@@ -40,6 +45,19 @@ const Task = (props) => {
             <Typography component="p" variant="subtitle2" color="text.primary">
               Due: {props.deadline}
             </Typography>
+
+            <Chip
+              label={props.priority}
+              color={
+                props.priority === "Low"
+                  ? "success"
+                  : props.priority === "Medium"
+                  ? "warning"
+                  : "error"
+              }
+              style={{ marginTop: "10px" }}
+            />
+
           </Box>
           <Typography
             component="p"
