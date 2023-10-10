@@ -1,4 +1,5 @@
-# react-basics-labs
+# react-movie-labs
 
+# Web App Dev 2: react-movie-labs Labs
 
-This is my weekly labs.
+# Practical labs for the Web App Dev 2, BSc. Applied/Cloud & Networking/Software Systems Dev/Forensics/Gaming
